@@ -1,0 +1,10 @@
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool-DB\bin\Debug\swimming_pool-DB.dacpac
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool-DB\bin\Debug\swimming_pool_DB.dll
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool-DB\bin\Debug\swimming_pool_DB.pdb
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool-DB\obj\Debug\Model.xml
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool-DB\obj\Debug\refactor.xml
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool-DB\obj\Debug\postdeploy.sql
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool-DB\obj\Debug\predeploy.sql
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool-DB\obj\Debug\swimming_pool_DB.dll
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool-DB\obj\Debug\swimming_pool_DB.pdb
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool-DB\obj\Debug\swimming_pool-DB.sqlprojAssemblyReference.cache

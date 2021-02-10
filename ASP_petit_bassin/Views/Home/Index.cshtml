@@ -1,0 +1,167 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+    <img class="w3-image" src="~/images/pool.jpg" alt="" width="1600" height="800">
+    <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+        <h1 class="w3-xxlarge">La piscine</h1>
+    </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+    <!-- About Section -->
+    <div class="w3-row w3-padding-64" id="about">
+        <div class="w3-col m6 w3-padding-large w3-hide-small">
+            <img src="~/images/portrait.jpg" class="w3-round w3-image w3-opacity-min" alt="" width="600">
+        </div>
+
+        <div class="w3-col m6 w3-padding-large">
+            <h1 class="w3-center">À propos</h1><br>
+            <h5 class="w3-center">Tradition since 1889</h5>
+            <p class="w3-large">La piscine de Saint-Gilles aussi appelée piscine Victor Boin propose une piscine de 33 mètres entourée de cabines individuelles. Elle comprend également des douches, une cafétéria et des cours de natation, aquagym... (pas de bassin d'apprentissage, pas de pataugeoire, pas de toboggan, pas de solarium, pas de bains bulles jacuzzi). </p>
+            <p class="w3-large w3-text-grey w3-hide-medium">
+                Une piscine de 33m/13 du début du 20ème siècle entourée de cabines individuelles
+                bains turcs et russes indisponibles actuellement car en en travaux
+                des douches
+                bancs solaires
+                cafétéria non opérationnelle qui fait office de lieu d'attente
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Horaires Section -->
+    <div class="w3-row w3-padding-64" id="horaires">
+
+        <h1 class="w3-center">Horaires</h1><br>
+        <h4 class="w3-center">Lundi, mardi, jeudi et vendredi </h4>
+        <p class="w3-text-grey w3-center">de 8h à 19h, rentrée chaque 30 minutes</p><br>
+
+        <h4 class="w3-center">Mercredi</h4>
+        <p class="w3-text-grey w3-center">de 14h à 19h, rentrée chaque 30 minutes</p><br>
+
+        <h4 class="w3-center">Samedi</h4>
+        <p class="w3-text-grey w3-center">de 9h à 12h et 13h à 18h, rentrée chaque 30 minutes</p><br>
+
+        <h4 class="w3-center">Dimanche</h4>
+        <p class="w3-text-grey w3-center">de 8h30 à 14h, rentrée chaque 30 minutes</p><br>
+    </div>
+
+    <div class="w3-row w3-padding-64" id="tarifs">
+
+        <h1 class="w3-center">Tarifs</h1><br>
+
+        <ul class="w3-text-grey w3-center">
+            <li><h4 class="w3-center">SAINT-GILLOIS </h4><br></li>
+            <li>ticket simple : 2.50€</li>
+            <li>ticket simple junior/sénior : 2€</li>
+            <li>carnet 12 bains adulte : 25€</li>
+            <li>carnet 12 bains junior/sénior : 20€</li>
+            <li>abonnement 3 mois adulte : 48€</li>
+            <li>abonnement 3 mois junior/sénior : 40€</li>
+        </ul><br><br>
+
+
+        <ul class="w3-text-grey w3-center">
+            <li><h4 class="w3-center"> NON SAINT-GILLOIS </h4><br></li>
+            <li>ticket simple : 4.50€</li>
+            <li>ticket simple junior/sénior : 3.50€</li>
+            <li>carnet de 12 bains adulte : 45€</li>
+            <li>carnet de 12 bains junior/sénior : 35€</li>
+            <li>abonnement 3 mois adulte : 68€</li>
+            <li>abonnement 3 mois junior/sénior : 57€</li>
+        </ul>
+
+    </div>
+
+    <hr>
+
+    <!-- Reservation Section -->
+    <div class="w3-container w3-padding-64" id="reservation">
+        <h1 class="w3-center">Reservation</h1><br>
+           <form action="/action_page.php" target="_blank">
+                <p><input class="w3-input w3-padding-16" type="text" placeholder="Prénom" required name="FirstName"></p>
+                <p><input class="w3-input w3-padding-16" type="text" placeholder="Nom" required name="LastName"></p>
+                <p><input class="w3-input w3-padding-16" type="number" placeholder="Combien de personnes" required name="People"></p>
+                <p><input class="w3-input w3-padding-16" type="email" placeholder="Email" required name="Email"></p>
+                <p><input class="w3-input w3-padding-16" type="text" placeholder="Telephone" required name="Telephone"></p>
+                <p><input class="w3-input w3-padding-16" type="datetime-local" placeholder="Date et horaire" required name="date" value="2020-11-16T20:00"></p>
+                <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+                <p><button class="w3-button w3-light-grey w3-section" type="submit">RESERVER</button></p>
+           </form>
+    </div>
+
+    <hr>
+
+    <!-- Blog Section -->
+    <div class="w3-row w3-padding-64" id="news">
+        <h1 class="w3-center">News</h1><br>
+        <div id="carouselExampleIndicators" class="carousel slide w3-center" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="~/images/illustration1.png" alt="First slide" width="800">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>...</h5>
+                        <p>...</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="~/images/illustration2.png" alt="Second slide" width="800">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>...</h5>
+                        <p>...</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="~/images/illustration3.png" alt="Third slide" width="800">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>...</h5>
+                        <p>...</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Contact Section -->
+    <div class="w3-container w3-padding-64" id="contact">
+        <h1 class="w3-center">Contacts</h1><br>
+        <p>
+            La piscine de Saint-Gilles se trouve à 2 pas de la barrière de Saint-Gilles.
+            Arrêt de transport en commun: Tram 97 🚇 ou Bus 48 🚍 arrêt "Barrière".
+        </p>
+        <p class="w3-text-blue-grey w3-large">
+            Piscine Saint-Gilles Victor Boin<br>
+            Rue de la Perche 38<br>
+            Téléphone : 02/539.06.15<br>
+            E-mail: sport.1060@stgilles.irisnet.be
+        </p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.2437750308104!2d4.338955951632342!3d50.82664837942852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c44299c51f23%3A0xba5bb89acd10b49a!2sPiscine%20Communale%20Victor%20Boin!5e0!3m2!1sen!2sbe!4v1612959981144!5m2!1sen!2sbe" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
