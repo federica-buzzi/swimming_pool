@@ -1,0 +1,6 @@
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool_DAL\bin\Debug\swimming_pool_DAL.dll
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool_DAL\bin\Debug\swimming_pool_DAL.pdb
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool_DAL\obj\Debug\swimming_pool_DAL.csprojAssemblyReference.cache
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool_DAL\obj\Debug\swimming_pool_DAL.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool_DAL\obj\Debug\swimming_pool_DAL.dll
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool_DAL\obj\Debug\swimming_pool_DAL.pdb

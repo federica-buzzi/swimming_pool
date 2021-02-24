@@ -77,3 +77,5 @@ C:\Users\User\source\repos\ASP_petit_bassin\ASP_petit_bassin\obj\Debug\ASP_petit
 C:\Users\User\source\repos\ASP_petit_bassin\ASP_petit_bassin\obj\Debug\ASP_petit_bassin.csproj.CopyComplete
 C:\Users\User\source\repos\ASP_petit_bassin\ASP_petit_bassin\obj\Debug\ASP_petit_bassin.dll
 C:\Users\User\source\repos\ASP_petit_bassin\ASP_petit_bassin\obj\Debug\ASP_petit_bassin.pdb
+C:\Users\User\source\repos\ASP_petit_bassin\ASP_petit_bassin\bin\swimming_pool_models.dll
+C:\Users\User\source\repos\ASP_petit_bassin\ASP_petit_bassin\bin\swimming_pool_models.pdb

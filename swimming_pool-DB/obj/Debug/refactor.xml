@@ -1,31 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Operations Version="1.0">
-  <Operation Name="Rename Refactor" Key="da0bb064-d7f5-48cf-bebd-9f79ab003648" ChangeDateTime="02/08/2021 14:51:37" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
-    <Property Name="ElementName" Value="[dbo].[User].[Id]" />
+  <Operation Name="Rename Refactor" Key="565b53dd-7f63-4ad8-bbdd-d8a6cea86a25" ChangeDateTime="02/10/2021 13:24:48" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Planning].[DaySchedule]" />
     <Property Name="ElementType" Value="SqlSimpleColumn" />
-    <Property Name="ParentElementName" Value="[dbo].[User]" />
+    <Property Name="ParentElementName" Value="[dbo].[Planning]" />
     <Property Name="ParentElementType" Value="SqlTable" />
-    <Property Name="NewName" Value="IdUser" />
+    <Property Name="NewName" Value="ScheduledDays" />
   </Operation>
-  <Operation Name="Rename Refactor" Key="1e04bc9c-dc18-4878-b5ae-0f7c1ab6d31b" ChangeDateTime="02/08/2021 14:59:26" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
-    <Property Name="ElementName" Value="[dbo].[User].[Name]" />
+  <Operation Name="Rename Refactor" Key="4255c27e-4387-4ebd-bb32-f78931e977bb" ChangeDateTime="02/10/2021 13:25:00" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Planning].[Time]" />
     <Property Name="ElementType" Value="SqlSimpleColumn" />
-    <Property Name="ParentElementName" Value="[dbo].[User]" />
+    <Property Name="ParentElementName" Value="[dbo].[Planning]" />
     <Property Name="ParentElementType" Value="SqlTable" />
-    <Property Name="NewName" Value="FirstName" />
+    <Property Name="NewName" Value="ScheduledTimes" />
   </Operation>
-  <Operation Name="Rename Refactor" Key="5a1eda33-b94c-4de3-9806-ff0d2ee94af8" ChangeDateTime="02/08/2021 15:05:31" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
-    <Property Name="ElementName" Value="[dbo].[Booking].[Id]" />
+  <Operation Name="Rename Refactor" Key="cb5d35e0-e427-4e7e-a0b6-0f79ca79102d" ChangeDateTime="02/10/2021 15:30:05" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Booking].[message]" />
     <Property Name="ElementType" Value="SqlSimpleColumn" />
     <Property Name="ParentElementName" Value="[dbo].[Booking]" />
     <Property Name="ParentElementType" Value="SqlTable" />
-    <Property Name="NewName" Value="IdBooking" />
-  </Operation>
-  <Operation Name="Rename Refactor" Key="c5dea864-8450-4f34-98ef-fa50cc4a655a" ChangeDateTime="02/08/2021 15:12:58" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
-    <Property Name="ElementName" Value="[dbo].[SwimSession].[Id]" />
-    <Property Name="ElementType" Value="SqlSimpleColumn" />
-    <Property Name="ParentElementName" Value="[dbo].[SwimSession]" />
-    <Property Name="ParentElementType" Value="SqlTable" />
-    <Property Name="NewName" Value="IdSwimSession" />
+    <Property Name="NewName" Value="Message" />
   </Operation>
 </Operations>

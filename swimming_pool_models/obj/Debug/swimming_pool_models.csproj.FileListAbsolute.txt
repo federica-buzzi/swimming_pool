@@ -1,0 +1,6 @@
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool_models\bin\Debug\swimming_pool_models.dll
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool_models\bin\Debug\swimming_pool_models.pdb
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool_models\obj\Debug\swimming_pool_models.csprojAssemblyReference.cache
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool_models\obj\Debug\swimming_pool_models.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool_models\obj\Debug\swimming_pool_models.dll
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool_models\obj\Debug\swimming_pool_models.pdb
