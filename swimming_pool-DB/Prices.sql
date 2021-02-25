@@ -2,5 +2,5 @@
 (
 	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
     [TicketType] NVARCHAR(50) NOT NULL, 
-    [TicketPrice] MONEY NOT NULL
+    [TicketPrice] FLOAT NOT NULL
 )

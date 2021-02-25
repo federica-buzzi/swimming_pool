@@ -10,7 +10,7 @@ namespace swimming_pool_repositories
 {
     public class NewsRepository : BaseRepository<NewsEntity>, IConcreteRepository<NewsEntity>
     {
-        public NewsRepository(string connactionString): base(connectionString)
+        public NewsRepository(string Cnstr): base(Cnstr)
         {
 
         }

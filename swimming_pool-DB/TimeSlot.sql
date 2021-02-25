@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[TimeSlot]
+(
+	[Id] INT NOT NULL PRIMARY KEY, 
+    [14h] BIT NOT NULL, 
+    [14.30] BIT NOT NULL, 
+    [15] BIT NOT NULL, 
+    [15.30] BIT NOT NULL, 
+    [16] BIT NOT NULL, 
+    [16.30] BIT NOT NULL
+)

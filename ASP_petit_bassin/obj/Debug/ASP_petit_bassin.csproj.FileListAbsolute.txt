@@ -79,3 +79,9 @@ C:\Users\User\source\repos\ASP_petit_bassin\ASP_petit_bassin\obj\Debug\ASP_petit
 C:\Users\User\source\repos\ASP_petit_bassin\ASP_petit_bassin\obj\Debug\ASP_petit_bassin.pdb
 C:\Users\User\source\repos\ASP_petit_bassin\ASP_petit_bassin\bin\swimming_pool_models.dll
 C:\Users\User\source\repos\ASP_petit_bassin\ASP_petit_bassin\bin\swimming_pool_models.pdb
+C:\Users\User\source\repos\ASP_petit_bassin\ASP_petit_bassin\bin\swimming_pool_repositories.dll
+C:\Users\User\source\repos\ASP_petit_bassin\ASP_petit_bassin\bin\swimming_pool_DAL.dll
+C:\Users\User\source\repos\ASP_petit_bassin\ASP_petit_bassin\bin\swimmin_pool_entities.dll
+C:\Users\User\source\repos\ASP_petit_bassin\ASP_petit_bassin\bin\swimming_pool_repositories.pdb
+C:\Users\User\source\repos\ASP_petit_bassin\ASP_petit_bassin\bin\swimming_pool_DAL.pdb
+C:\Users\User\source\repos\ASP_petit_bassin\ASP_petit_bassin\bin\swimmin_pool_entities.pdb

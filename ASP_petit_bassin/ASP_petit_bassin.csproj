@@ -293,6 +293,10 @@
       <Project>{c2c61619-1cbb-47a6-a8b2-b07e18812157}</Project>
       <Name>swimming_pool_models</Name>
     </ProjectReference>
+    <ProjectReference Include="..\swimming_pool_repositories\swimming_pool_repositories.csproj">
+      <Project>{50701029-9930-4d96-892b-80cc34164e43}</Project>
+      <Name>swimming_pool_repositories</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

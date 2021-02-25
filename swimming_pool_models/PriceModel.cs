@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace swimming_pool_models
 {
-    class PriceModel
+    public class PriceModel
     {
         private string _ticketType;
-        private int _ticketPrice;
+        private double _ticketPrice;
 
+        #region Props
         public string TicketType
         {
             get
@@ -24,7 +25,7 @@ namespace swimming_pool_models
             }
         }
 
-        public int TicketPrice
+        public double TicketPrice
         {
             get
             {
@@ -35,6 +36,7 @@ namespace swimming_pool_models
             {
                 _ticketPrice = value;
             }
-        }
+        } 
+        #endregion
     }
 }

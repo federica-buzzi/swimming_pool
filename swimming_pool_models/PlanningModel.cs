@@ -9,8 +9,9 @@ namespace swimming_pool_models
     public class PlanningModel
     {
         private string _scheduledDays, _extraInfo;
-        private DateTime _scheduledTime;
+        private TimeSpan _scheduledTimeStart, _scheduledTimeEnd;
 
+        #region MyRegion
         public string ScheduledDays
         {
             get
@@ -37,17 +38,32 @@ namespace swimming_pool_models
             }
         }
 
-        public DateTime ScheduledTime
+        public TimeSpan ScheduledTimeStart
         {
             get
             {
-                return _scheduledTime;
+                return _scheduledTimeStart;
             }
 
             set
             {
-                _scheduledTime = value;
+                _scheduledTimeStart = value;
             }
         }
+
+        public TimeSpan ScheduledTimeEnd
+        {
+            get
+            {
+                return _scheduledTimeEnd;
+            }
+
+            set
+            {
+                _scheduledTimeEnd = value;
+            }
+        }
+
+        #endregion
     }
 }

@@ -17,8 +17,9 @@ namespace swimming_pool_repositories
 
         public UnitOfWork(string connectionString)
         {
-            //_newsRepo = new NewsEntity(connectionString);
-            //_planningRepo = new PlanningEntity 
+            _newsRepo = new NewsRepository(connectionString);
+            _planningRepo = new PlanningRepository(connectionString);
+            _priceRepo = new PriceRepository(connectionString);
         }
     }
 }
