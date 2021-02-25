@@ -52,6 +52,10 @@
       <Project>{8675cfc7-dc91-4235-9b57-08cc41a83141}</Project>
       <Name>swimming_pool_DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\swimming_pool_models\swimming_pool_models.csproj">
+      <Project>{c2c61619-1cbb-47a6-a8b2-b07e18812157}</Project>
+      <Name>swimming_pool_models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\swimmin_pool_entities\swimmin_pool_entities.csproj">
       <Project>{a3498d83-5d00-42c4-81d4-533a31b439c0}</Project>
       <Name>swimmin_pool_entities</Name>

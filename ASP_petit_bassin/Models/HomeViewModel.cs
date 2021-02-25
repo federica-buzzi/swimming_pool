@@ -20,23 +20,17 @@ namespace ASP_petit_bassin.Models
         public HomeViewModel()
         {
             //   section horaires
-            Planning = new List<PlanningModel>();
-            Planning.Add(new PlanningModel() { ScheduledDays = "lundi, mardi, jeudi, vendredi", ScheduledTimeStart= new TimeSpan(08,00,00), ScheduledTimeEnd= new TimeSpan(19,00,00), ExtraInfo="rentrée chaque 30 min" });
-            Planning.Add(new PlanningModel() { ScheduledDays = "mercredi", ScheduledTimeStart = new TimeSpan(14, 00, 00), ScheduledTimeEnd = new TimeSpan(19, 00, 00), ExtraInfo = "rentrée chaque 30 min" });
-            Planning.Add(new PlanningModel() { ScheduledDays = "samedi", ScheduledTimeStart = new TimeSpan(09, 00, 00), ScheduledTimeEnd = new TimeSpan(12, 00, 00), ExtraInfo = "rentrée chaque 30 min" });
-            Planning.Add(new PlanningModel() { ScheduledDays = "dimanche", ScheduledTimeStart = new TimeSpan(08, 30, 00), ScheduledTimeEnd = new TimeSpan(14, 00, 00), ExtraInfo = "rentrée chaque 30 min" });
-
+            
+            Planning = uow.GetPlanning();
 
             //   section tarifs StGillois 
-            PriceStGillois = new List<PriceModel>();
-            PriceStGillois.Add(new PriceModel() { TicketType = "ticket simple", TicketPrice = 2.5 });
-            PriceStGillois.Add(new PriceModel() { TicketType = "ticket simple junior/senior", TicketPrice = 2 });
-            PriceStGillois.Add(new PriceModel() { TicketType = "carnet 12 bains adulte", TicketPrice = 25 });
-            PriceStGillois.Add(new PriceModel() { TicketType = "carnet 12 bains junior/senior", TicketPrice = 20 });
-            PriceStGillois.Add(new PriceModel() { TicketType = "abbonnement 3 mois adulte", TicketPrice = 48 });
-            PriceStGillois.Add(new PriceModel() { TicketType = "abbonnement 3 mois junior/senior", TicketPrice = 40 });
+
+            PriceStGillois = uow.GetPrice(); 
+            
 
             //   section tarifs NStGillois
+
+            PriceStGillois = uow.GetPrice();
             PriceNStGillois = new List<PriceModel>();
             PriceNStGillois.Add(new PriceModel() { TicketType = "ticket simple", TicketPrice = 4.5 });
             PriceNStGillois.Add(new PriceModel() { TicketType = "ticket simple junior/senior", TicketPrice = 3.5 });

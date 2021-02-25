@@ -9,8 +9,9 @@ namespace swimmin_pool_entities
     public class PlanningEntity
     {
         private string _scheduledDays, _extraInfo;
-        private DateTime _scheduledTime;
+        private string _scheduledTimeStart, _scheduledTimeEnd;
 
+        #region Props
         public string ScheduledDays
         {
             get
@@ -37,17 +38,31 @@ namespace swimmin_pool_entities
             }
         }
 
-        public DateTime ScheduledTime
+        public string ScheduledTimeStart
         {
             get
             {
-                return _scheduledTime;
+                return _scheduledTimeStart;
             }
 
             set
             {
-                _scheduledTime = value;
+                _scheduledTimeStart = value;
             }
         }
+
+        public string ScheduledTimeEnd
+        {
+            get
+            {
+                return _scheduledTimeEnd;
+            }
+
+            set
+            {
+                _scheduledTimeEnd = value;
+            }
+        } 
+        #endregion
     }
 }

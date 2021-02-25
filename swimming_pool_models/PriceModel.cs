@@ -10,6 +10,7 @@ namespace swimming_pool_models
     {
         private string _ticketType;
         private double _ticketPrice;
+        private bool _stGillois; 
 
         #region Props
         public string TicketType
@@ -36,7 +37,20 @@ namespace swimming_pool_models
             {
                 _ticketPrice = value;
             }
-        } 
+        }
+
+        public bool StGillois
+        {
+            get
+            {
+                return _stGillois;
+            }
+
+            set
+            {
+                _stGillois = value;
+            }
+        }
         #endregion
     }
 }

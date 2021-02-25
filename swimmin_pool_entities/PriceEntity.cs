@@ -9,7 +9,8 @@ namespace swimmin_pool_entities
     public class PriceEntity
     {
         private string _ticketType;
-        private int _ticketPrice;
+        private double _ticketPrice;
+        private bool _stGillois; 
 
         public string TicketType
         {
@@ -24,7 +25,7 @@ namespace swimmin_pool_entities
             }
         }
 
-        public int TicketPrice
+        public double TicketPrice
         {
             get
             {
@@ -34,6 +35,19 @@ namespace swimmin_pool_entities
             set
             {
                 _ticketPrice = value;
+            }
+        }
+
+        public bool StGillois
+        {
+            get
+            {
+                return _stGillois;
+            }
+
+            set
+            {
+                _stGillois = value;
             }
         }
     }

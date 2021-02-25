@@ -21,7 +21,8 @@ namespace swimming_pool_repositories
 
         public List<PriceEntity> Get()
         {
-            throw new NotImplementedException();
+            string requete = "Select * from Prices";
+            return base.Get(requete); 
         }
 
         public PriceEntity GetOne(int PK)

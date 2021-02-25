@@ -9,3 +9,5 @@ C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool_repositories\bin\Debug
 C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool_repositories\obj\Debug\swimming_pool_repositories.csproj.CopyComplete
 C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool_repositories\obj\Debug\swimming_pool_repositories.dll
 C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool_repositories\obj\Debug\swimming_pool_repositories.pdb
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool_repositories\bin\Debug\swimming_pool_models.dll
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool_repositories\bin\Debug\swimming_pool_models.pdb

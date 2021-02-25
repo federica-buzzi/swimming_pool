@@ -23,7 +23,8 @@ namespace swimming_pool_repositories
 
         public List<PlanningEntity> Get()
         {
-            throw new NotImplementedException();
+            string requete = "Select * from Planning";
+            return base.Get(requete); 
         }
 
         public PlanningEntity GetOne(int PK)

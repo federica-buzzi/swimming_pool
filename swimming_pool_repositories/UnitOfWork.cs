@@ -1,5 +1,6 @@
 ﻿using NetFlask.DAL.Repositories;
 using swimmin_pool_entities;
+using swimming_pool_models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,5 +22,71 @@ namespace swimming_pool_repositories
             _planningRepo = new PlanningRepository(connectionString);
             _priceRepo = new PriceRepository(connectionString);
         }
+
+        #region Planning
+        public List<PlanningModel> GetPlanning()
+        {
+            //instanciation repo 
+           List<PlanningEntity> planningfromDB = _planningRepo.Get();
+
+            //mapping de l'entity vers le model
+           List<PlanningModel> planningToController = new List<PlanningModel>();
+
+
+            foreach (PlanningEntity item in planningfromDB)
+            {
+                planningToController.Add(new PlanningModel() 
+                    { ScheduledDays = item.ScheduledDays,
+                      ScheduledTimeStart = item.ScheduledTimeStart, 
+                      ScheduledTimeEnd= item.ScheduledTimeEnd, 
+                      ExtraInfo= item.ExtraInfo,
+                }); 
+            }
+
+            return planningToController;
+        }
+        #endregion
+
+        #region Price
+
+        public List<PriceModel> GetPrice()
+        {
+            //instanciation repo 
+            List<PriceEntity> pricefromDB = _priceRepo.Get();
+
+            //mapping de l'entity vers le model
+
+            List<PriceModel> priceStGilloisToController = new List<PriceModel>();
+            List<PriceModel> priceNStGilloisToController = new List<PriceModel>();
+            Dictionary<string,List<PriceModel>> allPrices = new Dictionary<string, List<PriceModel>>(); 
+
+            foreach (PriceEntity item in pricefromDB)
+            {
+                if (item.StGillois == true)
+                {
+                    priceStGilloisToController.Add(new PriceModel()
+                    {
+                    TicketType = item.TicketType,
+                    TicketPrice = item.TicketPrice,
+                    StGillois = item.StGillois,
+                    });
+                }
+                else
+                {
+                    priceNStGilloisToController.Add(new PriceModel()
+                    {
+                        TicketType = item.TicketType,
+                        TicketPrice = item.TicketPrice,
+                        StGillois = item.StGillois,
+                    });
+                }
+            }
+
+            allPrices.Add("priceStGillois", priceStGilloisToController);
+            allPrices.Add("priceNStGillois", priceNStGilloisToController);
+            return allPrices; 
+        }
+
+        #endregion
     }
 }
