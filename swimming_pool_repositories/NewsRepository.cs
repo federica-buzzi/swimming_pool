@@ -21,7 +21,8 @@ namespace swimming_pool_repositories
 
         public List<NewsEntity> Get()
         {
-            throw new NotImplementedException();
+            string requete = "Select * from News";
+            return base.Get(requete); 
         }
 
         public NewsEntity GetOne(int PK)

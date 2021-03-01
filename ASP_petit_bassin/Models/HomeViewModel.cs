@@ -16,6 +16,7 @@ namespace ASP_petit_bassin.Models
         private List<PlanningModel> _planning;
         private List<PriceModel> _priceStGillois, _priceNStGillois; 
         private List<NewsModel> _news;
+        private Dictionary<string, List<PriceModel>> _allprices;
 
         public HomeViewModel()
         {
@@ -23,28 +24,20 @@ namespace ASP_petit_bassin.Models
             
             Planning = uow.GetPlanning();
 
-            //   section tarifs StGillois 
+            //   recuperate allprices dictionary
+            Allprices = uow.GetPrice();
 
-            PriceStGillois = uow.GetPrice(); 
-            
+            //   dans le dicytionary recuperer tarifs StGillois 
 
-            //   section tarifs NStGillois
+            PriceStGillois = Allprices["priceStGillois"];
 
-            PriceStGillois = uow.GetPrice();
-            PriceNStGillois = new List<PriceModel>();
-            PriceNStGillois.Add(new PriceModel() { TicketType = "ticket simple", TicketPrice = 4.5 });
-            PriceNStGillois.Add(new PriceModel() { TicketType = "ticket simple junior/senior", TicketPrice = 3.5 });
-            PriceNStGillois.Add(new PriceModel() { TicketType = "carnet 12 bains adulte", TicketPrice = 45 });
-            PriceNStGillois.Add(new PriceModel() { TicketType = "carnet 12 bains junior/senior", TicketPrice = 35 });
-            PriceNStGillois.Add(new PriceModel() { TicketType = "abbonnement 3 mois adulte", TicketPrice = 68 });
-            PriceNStGillois.Add(new PriceModel() { TicketType = "abbonnement 3 mois junior/senior", TicketPrice = 57 });
 
-            // section news
-            News = new List<NewsModel>();
-            News.Add(new NewsModel() { Image = "illustration1.png", Caption = "amazing pool party!" });
-            News.Add(new NewsModel() { Image = "illustration2.png", Caption = "swimming pool closed from 14th february" });
-            News.Add(new NewsModel() { Image = "illustration3.png", Caption = "no aquagym classes" });
+            //   tarifs NStGillois
 
+            PriceNStGillois = Allprices["priceNStGillois"];
+
+            //   section news
+            News = uow.GetNews(); 
         }
 
 
@@ -102,6 +95,19 @@ namespace ASP_petit_bassin.Models
             set
             {
                 _planning = value;
+            }
+        }
+
+        public Dictionary<string, List<PriceModel>> Allprices
+        {
+            get
+            {
+                return _allprices;
+            }
+
+            set
+            {
+                _allprices = value;
             }
         }
 

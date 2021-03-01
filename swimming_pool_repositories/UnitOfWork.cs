@@ -29,7 +29,7 @@ namespace swimming_pool_repositories
             //instanciation repo 
            List<PlanningEntity> planningfromDB = _planningRepo.Get();
 
-            //mapping de l'entity vers le model
+           //mapping de l'entity vers le model
            List<PlanningModel> planningToController = new List<PlanningModel>();
 
 
@@ -49,16 +49,17 @@ namespace swimming_pool_repositories
 
         #region Price
 
-        public List<PriceModel> GetPrice()
+        public Dictionary<string, List<PriceModel>> GetPrice()
         {
             //instanciation repo 
             List<PriceEntity> pricefromDB = _priceRepo.Get();
 
-            //mapping de l'entity vers le model
+            //creation d'un dictionary pour stocker les 2 listes priceStGilloisToController, priceNStGilloisToController
+            Dictionary<string, List<PriceModel>> allPrices = new Dictionary<string, List<PriceModel>>();
 
+            //mapping de l'entity vers le model
             List<PriceModel> priceStGilloisToController = new List<PriceModel>();
             List<PriceModel> priceNStGilloisToController = new List<PriceModel>();
-            Dictionary<string,List<PriceModel>> allPrices = new Dictionary<string, List<PriceModel>>(); 
 
             foreach (PriceEntity item in pricefromDB)
             {
@@ -66,9 +67,8 @@ namespace swimming_pool_repositories
                 {
                     priceStGilloisToController.Add(new PriceModel()
                     {
-                    TicketType = item.TicketType,
-                    TicketPrice = item.TicketPrice,
-                    StGillois = item.StGillois,
+                        TicketType = item.TicketType,
+                        TicketPrice = item.TicketPrice,
                     });
                 }
                 else
@@ -77,7 +77,6 @@ namespace swimming_pool_repositories
                     {
                         TicketType = item.TicketType,
                         TicketPrice = item.TicketPrice,
-                        StGillois = item.StGillois,
                     });
                 }
             }
@@ -87,6 +86,28 @@ namespace swimming_pool_repositories
             return allPrices; 
         }
 
+        #endregion
+
+        #region News
+        public List<NewsModel> GetNews() 
+        {
+            //instanciation repo 
+            List<NewsEntity> newsfromDB = _newsRepo.Get();
+
+            //mapping de l'entity vers le model
+            List<NewsModel> newsToController = new List<NewsModel>(); 
+
+            foreach(NewsEntity item in newsfromDB)
+            {
+                newsToController.Add(new NewsModel()
+                {
+                    Image = item.Image, 
+                    Caption = item.Caption, 
+                }); 
+
+            }
+            return newsToController; 
+        }
         #endregion
     }
 }
