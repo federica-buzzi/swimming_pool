@@ -1,4 +1,5 @@
 ﻿using ASP_petit_bassin.Models;
+using swimming_pool_models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,24 +10,33 @@ namespace ASP_petit_bassin.Controllers
 {
     public class HomeController : Controller
     {
+        //si le formulaire est dans la meme page que toute le reste je fais un HttpGet avant l'Index()?
+        [HttpGet]
         public ActionResult Index()
         {
-            HomeViewModel hm = new HomeViewModel(); 
+            HomeViewModel hm = new HomeViewModel();
             return View(hm);
         }
 
-        public ActionResult About()
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult BookingForm(BookingFormModel MyBookingModel)
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            return View(); 
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
+        //public ActionResult About()
+        //{
+        //    ViewBag.Message = "Your application description page.";
 
-            return View();
-        }
+        //    return View();
+        //}
+
+        //public ActionResult Contact()
+        //{
+        //    ViewBag.Message = "Your contact page.";
+
+        //    return View();
+        //}
     }
 }

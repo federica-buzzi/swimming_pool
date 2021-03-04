@@ -4,3 +4,7 @@ C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool-DB\bin\Debug\swimming_
 C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool-DB\obj\Debug\swimming_pool_DB.dll
 C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool-DB\obj\Debug\swimming_pool_DB.pdb
 C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool-DB\obj\Debug\swimming_pool-DB.sqlprojAssemblyReference.cache
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool-DB\obj\Debug\Model.xml
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool-DB\obj\Debug\refactor.xml
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool-DB\obj\Debug\postdeploy.sql
+C:\Users\User\source\repos\ASP_petit_bassin\swimming_pool-DB\obj\Debug\predeploy.sql

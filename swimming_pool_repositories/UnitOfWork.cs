@@ -13,14 +13,15 @@ namespace swimming_pool_repositories
     {
         IConcreteRepository<NewsEntity> _newsRepo;
         IConcreteRepository<PlanningEntity> _planningRepo;
-        IConcreteRepository<PriceEntity> _priceRepo; 
-
+        IConcreteRepository<PriceEntity> _priceRepo;
+        IConcreteRepository<BookingFormEntity> _bookingFormRepo;
 
         public UnitOfWork(string connectionString)
         {
             _newsRepo = new NewsRepository(connectionString);
             _planningRepo = new PlanningRepository(connectionString);
             _priceRepo = new PriceRepository(connectionString);
+            _bookingFormRepo = new BookingFormRepository(connectionString); 
         }
 
         #region Planning
@@ -107,6 +108,24 @@ namespace swimming_pool_repositories
 
             }
             return newsToController; 
+        }
+        #endregion
+
+        #region Booking
+
+        public bool SaveBooking(BookingFormModel bfm)
+        {
+            //instanciation repo 
+            BookingFormEntity bfe = new BookingFormEntity();
+
+            bfe.FirstName = bfm.FirstName;
+            bfe.LastName = bfm.LastName;
+            bfe.SpotsBooked = bfm.SpotsBooked;
+            bfe.Email = bfm.Email;
+            bfe.Telephone = bfm.Telephone;
+            bfe.Datetime = new DateTime(bfm.Datetime);
+            bfe.Message = bfm.Message;
+            return _bookingFormRepo.Insert(bfe); 
         }
         #endregion
     }

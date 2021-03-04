@@ -11,7 +11,7 @@ namespace swimming_pool_models
         private string _scheduledDays, _extraInfo;
         private string _scheduledTimeStart, _scheduledTimeEnd;
 
-        #region MyRegion
+        #region Props
         public string ScheduledDays
         {
             get

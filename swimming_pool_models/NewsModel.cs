@@ -10,6 +10,7 @@ namespace swimming_pool_models
     {
         private string _image, _caption;
 
+        #region Props
         public string Image
         {
             get
@@ -34,6 +35,7 @@ namespace swimming_pool_models
             {
                 _caption = value;
             }
-        }
+        } 
+        #endregion
     }
 }
