@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminEntity.cs" />
     <Compile Include="BookingFormEntity.cs" />
     <Compile Include="NewsEntity.cs" />
     <Compile Include="PlanningEntity.cs" />

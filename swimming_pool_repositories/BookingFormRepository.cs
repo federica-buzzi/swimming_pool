@@ -32,7 +32,7 @@ namespace swimming_pool_repositories
 
         public bool Insert(BookingFormEntity toInsert)
         {
-            string requete = @"INSERT INTO BookingForm(FirstName, LastName, SpotsBooked, Email, Telephone, DateTime, Message) values (@FirstName, @LastName, @SpotsBooked, @Email, @Telephone, @DateTime, @Message";
+            string requete = @"INSERT INTO [dbo].[BookingForm]([FirstName], [LastName], [SpotsBooked], [Email], [BookingDate], [BookingTime], [Telephone]) VALUES (@FirstName, @LastName, @SpotsBooked, @Email, @BookingDate, @BookingTime, @Telephone)";
             return base.Insert(toInsert, requete); 
         }
 

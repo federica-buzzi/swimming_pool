@@ -7,4 +7,74 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="DateTime" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="cbb149ea-44ae-4794-addb-75f24b09609d" ChangeDateTime="03/10/2021 15:32:28" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Date].[Monday]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Date]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="monday" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2b033e63-7bc2-43e6-8a81-99ad5e47ee42" ChangeDateTime="03/10/2021 15:32:35" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Date].[Tuesday]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Date]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="tuesday" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1e5c2682-a66d-4b40-b1da-2a03298cb860" ChangeDateTime="03/10/2021 15:32:38" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Date].[Wednesday]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Date]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="wednesday" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="76308de0-2f58-4b8e-80e9-014995e2cb32" ChangeDateTime="03/10/2021 15:32:41" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Date].[Thursday]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Date]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="thursday" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6d4b72f2-a94c-4fea-9aad-3169f63c8b60" ChangeDateTime="03/10/2021 15:32:45" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Date].[Friday]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Date]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="friday" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="dd2829a3-c396-4917-b84f-eb75c0029ef3" ChangeDateTime="03/10/2021 15:32:49" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Date].[Saturday]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Date]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="saturday" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3c3dada0-2e41-4a65-bc11-f4d3b66a8b4d" ChangeDateTime="03/10/2021 15:32:55" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Date].[Sunday]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Date]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="sunday" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="148776c1-ef23-441e-a7fe-6331f08965c0" ChangeDateTime="03/10/2021 16:27:44" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[BookingForm].[DateTime]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[BookingForm]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Date" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ae2461e2-5ff8-4a9d-8ab7-08cac33067cd" ChangeDateTime="03/10/2021 19:50:56" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[BookingForm].[Date]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[BookingForm]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="BookingDateTime" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4c78b136-a365-40a4-8a11-2f9a4ed0bcf1" ChangeDateTime="03/12/2021 08:18:21" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[BookingForm].[BookingDateTime]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[BookingForm]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="BookingDate" />
+  </Operation>
 </Operations>

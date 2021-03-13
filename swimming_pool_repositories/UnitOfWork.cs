@@ -114,17 +114,20 @@ namespace swimming_pool_repositories
         #region Booking
 
         public bool SaveBooking(BookingFormModel bfm)
-        {
+        { 
             //instanciation repo 
             BookingFormEntity bfe = new BookingFormEntity();
-
-            bfe.FirstName = bfm.FirstName;
-            bfe.LastName = bfm.LastName;
-            bfe.SpotsBooked = bfm.SpotsBooked;
-            bfe.Email = bfm.Email;
-            bfe.Telephone = bfm.Telephone;
-            bfe.Datetime = new DateTime(bfm.Datetime);
-            bfe.Message = bfm.Message;
+            {
+                //mapping du model vers l'entité
+                bfe.FirstName = bfm.FirstName;
+                bfe.LastName = bfm.LastName;
+                bfe.SpotsBooked = bfm.SpotsBooked;
+                bfe.Email = bfm.Email;
+                bfe.Telephone = bfm.Telephone;
+                bfe.BookingDate = bfm.BookingDate;
+                bfe.BookingTime = bfm.BookingTime;
+                bfe.Message = bfm.Message;
+            }; 
             return _bookingFormRepo.Insert(bfe); 
         }
         #endregion

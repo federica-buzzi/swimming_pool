@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,11 +9,15 @@ namespace swimming_pool_models
 {
     public class BookingFormModel
     {
-        string _firstName, _lastName, _email, _telephone, _message;
-        int _spotsBooked;
-        DateTime _datetime;
+        private string _firstName, _lastName, _email, _telephone, _message;
+        private int _spotsBooked;
+        private DateTime _bookingDate;
+        private string _bookingTime;
+
 
         #region Props
+        [Required]
+        [MaxLength(50)]
         public string FirstName
         {
             get
@@ -26,6 +31,8 @@ namespace swimming_pool_models
             }
         }
 
+        [Required]
+        [MaxLength(50)]
         public string LastName
         {
             get
@@ -39,6 +46,10 @@ namespace swimming_pool_models
             }
         }
 
+        [Required]
+        [MaxLength(323)]
+        [DataType(DataType.EmailAddress)]
+        [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}")]
         public string Email
         {
             get
@@ -52,6 +63,9 @@ namespace swimming_pool_models
             }
         }
 
+
+        [Required]
+        [MaxLength(12)]
         public string Telephone
         {
             get
@@ -91,18 +105,32 @@ namespace swimming_pool_models
             }
         }
 
-        public DateTime Datetime
+        public DateTime BookingDate
         {
             get
             {
-                return _datetime;
+                return _bookingDate;
             }
 
             set
             {
-                _datetime = value;
+                _bookingDate = value;
             }
-        } 
+        }
+
+        public string BookingTime
+        {
+            get
+            {
+                return _bookingTime;
+            }
+
+            set
+            {
+                _bookingTime = value;
+            }
+        }
+
         #endregion
     }
 }

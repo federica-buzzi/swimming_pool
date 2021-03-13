@@ -8,9 +8,10 @@ namespace swimmin_pool_entities
 {
     public class BookingFormEntity
     {
-        string _firstName, _lastName, _email, _telephone, _message;
-        int _spotsBooked;
-        DateTime _datetime;
+        private string _firstName, _lastName, _email, _telephone, _message;
+        private int _spotsBooked;
+        private DateTime _bookingDate;
+        private string _bookingTime; 
 
         #region Props
         public string FirstName
@@ -91,18 +92,33 @@ namespace swimmin_pool_entities
             }
         }
 
-        public DateTime Datetime
+        public DateTime BookingDate
         {
             get
             {
-                return _datetime;
+                return _bookingDate;
             }
 
             set
             {
-                _datetime = value;
+                _bookingDate = value;
             }
         }
+
+        public string BookingTime
+        {
+            get
+            {
+                return _bookingTime;
+            }
+
+            set
+            {
+                _bookingTime = value;
+            }
+        }
+
+
         #endregion
     }
 }

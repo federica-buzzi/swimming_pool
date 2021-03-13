@@ -1,7 +1,9 @@
 ﻿using ASP_petit_bassin.Models;
 using swimming_pool_models;
+using swimming_pool_repositories;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -20,23 +22,32 @@ namespace ASP_petit_bassin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult BookingForm(BookingFormModel MyBookingModel)
+        public ActionResult Index(BookingFormModel MyBookingModel)
         {
-            return View(); 
+            HomeViewModel hm = new HomeViewModel();
+            if (ModelState.IsValid)
+            {
+                //je recupere la connectionString
+                UnitOfWork uow = new UnitOfWork(ConfigurationManager.ConnectionStrings["Cnstr"].ConnectionString);
+                if (uow.SaveBooking(MyBookingModel))
+                {
+                    ViewBag.SuccessMessage = "Rendez-vous enregistré"; 
+                    return View(hm);
+                }
+                else
+                {
+                    ViewBag.ErrorMessage = "Rendez vous pas enregistré";
+                    return View(hm);
+                }
+            }
+            else
+            {
+                ViewBag.ErrorMessage = "Formulaire error";
+                return View(hm);
+            }
         }
+        //correct de retourner chaque fois une view(hm)?
 
-        //public ActionResult About()
-        //{
-        //    ViewBag.Message = "Your application description page.";
-
-        //    return View();
-        //}
-
-        //public ActionResult Contact()
-        //{
-        //    ViewBag.Message = "Your contact page.";
-
-        //    return View();
-        //}
+ 
     }
 }

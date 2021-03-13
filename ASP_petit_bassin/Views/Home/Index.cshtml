@@ -81,16 +81,33 @@
     <!-- Reservation Section -->
     <div class="w3-container w3-padding-64" id="reservation">
         <h1 class="w3-center">Reservation</h1><br>
-        <form action="/action_page.php" target="_blank">
+        <form method="post">
+            @Html.AntiForgeryToken() 
             <p><input class="w3-input w3-padding-16" type="text" placeholder="Prénom" required name="FirstName"></p>
             <p><input class="w3-input w3-padding-16" type="text" placeholder="Nom" required name="LastName"></p>
-            <p><input class="w3-input w3-padding-16" type="number" placeholder="Combien de personnes" required name="SpotsBooked"></p>
+            <p><input class="w3-input w3-padding-16" type="number" placeholder="Combien de personnes" required name="SpotsBooked" min="1" step="1"></p>
             <p><input class="w3-input w3-padding-16" type="email" placeholder="Email" required name="Email"></p>
             <p><input class="w3-input w3-padding-16" type="text" placeholder="Telephone" required name="Telephone"></p>
-            <p><input class="w3-input w3-padding-16" type="datetime-local" placeholder="Date et horaire" required name="Datetime" value="2020-11-16T20:00"></p>
-            <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+            <p><input class="w3-input w3-padding-16" type="date" placeholder="Date et horaire" required name="BookingDate" value="2020-11-16"></p>
+            <select name="BookingTime" type="text" required >
+                <option>13.00</option>
+                <option>14.00</option>
+                <option>15.00</option>
+                <option>16.00</option>
+            </select>
+            <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" name="Message"></p>
             <p><button class="w3-button w3-light-grey w3-section" type="submit">RESERVER</button></p>
         </form>
+    </div>
+    <div>
+        @if (ViewBag.SuccessMessage != null)
+        {
+            @:<div>@ViewBag.SuccessMessage</div>
+        }
+        @if (ViewBag.ErrorMessage != null)
+        {
+            @:<div>@ViewBag.ErrorMessage</div>
+        }
     </div>
 
     <hr>
@@ -139,7 +156,7 @@
                         }
 
                     }
-                   
+
                 </div>
 
                 <!-- Left and right controls -->

@@ -17,6 +17,7 @@ namespace ASP_petit_bassin.Models
         private List<PriceModel> _priceStGillois, _priceNStGillois; 
         private List<NewsModel> _news;
         private Dictionary<string, List<PriceModel>> _allprices;
+        
 
         public HomeViewModel()
         {
@@ -27,17 +28,19 @@ namespace ASP_petit_bassin.Models
             //   recuperate allprices dictionary
             Allprices = uow.GetPrice();
 
-            //   dans le dicytionary recuperer tarifs StGillois 
+            //   dans le dictionary recuperer tarifs StGillois 
 
             PriceStGillois = Allprices["priceStGillois"];
-
 
             //   tarifs NStGillois
 
             PriceNStGillois = Allprices["priceNStGillois"];
 
             //   section news
-            News = uow.GetNews(); 
+            News = uow.GetNews();
+
+            
+
         }
 
 
@@ -110,6 +113,8 @@ namespace ASP_petit_bassin.Models
                 _allprices = value;
             }
         }
+
+
 
         #endregion
     }

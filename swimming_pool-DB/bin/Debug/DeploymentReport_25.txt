@@ -1,0 +1,20 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The type for column BookingDateTime in table [dbo].[BookingForm] is currently  VARCHAR (250) NOT NULL but is being
+         changed to  DATETIME NOT NULL. Data loss could occur and deployment may fail if the column contains data that is
+         incompatible with type  DATETIME NOT NULL.
+
+** User actions
+     Alter
+       [dbo].[BookingForm] (Table)
+
+** Supporting actions
+
+The type for column BookingDateTime in table [dbo].[BookingForm] is currently  VARCHAR (250) NOT NULL but is being changed to  DATETIME NOT NULL. Data loss could occur and deployment may fail if the column contains data that is incompatible with type  DATETIME NOT NULL.
+
