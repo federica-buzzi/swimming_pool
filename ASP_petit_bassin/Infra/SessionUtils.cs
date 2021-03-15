@@ -1,4 +1,5 @@
-﻿using System;
+﻿using swimming_pool_models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -19,6 +20,17 @@ namespace ASP_petit_bassin.Infra
             }
 
             set { HttpContext.Current.Session["logged"] = value;  }
+        }
+
+        public static UserModel ConnectedUser
+        {
+            get
+            {
+                return (UserModel)HttpContext.Current.Session["ConnectedUser"];
+            }
+
+            set { HttpContext.Current.Session["ConnectedUser"] = value; }
+
         }
     }
 }

@@ -15,33 +15,36 @@ namespace swimming_pool_repositories
         IConcreteRepository<PlanningEntity> _planningRepo;
         IConcreteRepository<PriceEntity> _priceRepo;
         IConcreteRepository<BookingFormEntity> _bookingFormRepo;
+        IConcreteRepository<UserEntity> _userRepo;
 
         public UnitOfWork(string connectionString)
         {
             _newsRepo = new NewsRepository(connectionString);
             _planningRepo = new PlanningRepository(connectionString);
             _priceRepo = new PriceRepository(connectionString);
-            _bookingFormRepo = new BookingFormRepository(connectionString); 
+            _bookingFormRepo = new BookingFormRepository(connectionString);
+            _userRepo = new UserRepository(connectionString);
         }
 
         #region Planning
         public List<PlanningModel> GetPlanning()
         {
             //instanciation repo 
-           List<PlanningEntity> planningfromDB = _planningRepo.Get();
+            List<PlanningEntity> planningfromDB = _planningRepo.Get();
 
-           //mapping de l'entity vers le model
-           List<PlanningModel> planningToController = new List<PlanningModel>();
+            //mapping de l'entity vers le model
+            List<PlanningModel> planningToController = new List<PlanningModel>();
 
 
             foreach (PlanningEntity item in planningfromDB)
             {
-                planningToController.Add(new PlanningModel() 
-                    { ScheduledDays = item.ScheduledDays,
-                      ScheduledTimeStart = item.ScheduledTimeStart, 
-                      ScheduledTimeEnd= item.ScheduledTimeEnd, 
-                      ExtraInfo= item.ExtraInfo,
-                }); 
+                planningToController.Add(new PlanningModel()
+                {
+                    ScheduledDays = item.ScheduledDays,
+                    ScheduledTimeStart = item.ScheduledTimeStart,
+                    ScheduledTimeEnd = item.ScheduledTimeEnd,
+                    ExtraInfo = item.ExtraInfo,
+                });
             }
 
             return planningToController;
@@ -84,37 +87,37 @@ namespace swimming_pool_repositories
 
             allPrices.Add("priceStGillois", priceStGilloisToController);
             allPrices.Add("priceNStGillois", priceNStGilloisToController);
-            return allPrices; 
+            return allPrices;
         }
 
         #endregion
 
         #region News
-        public List<NewsModel> GetNews() 
+        public List<NewsModel> GetNews()
         {
             //instanciation repo 
             List<NewsEntity> newsfromDB = _newsRepo.Get();
 
             //mapping de l'entity vers le model
-            List<NewsModel> newsToController = new List<NewsModel>(); 
+            List<NewsModel> newsToController = new List<NewsModel>();
 
-            foreach(NewsEntity item in newsfromDB)
+            foreach (NewsEntity item in newsfromDB)
             {
                 newsToController.Add(new NewsModel()
                 {
-                    Image = item.Image, 
-                    Caption = item.Caption, 
-                }); 
+                    Image = item.Image,
+                    Caption = item.Caption,
+                });
 
             }
-            return newsToController; 
+            return newsToController;
         }
         #endregion
 
         #region Booking
 
         public bool SaveBooking(BookingFormModel bfm)
-        { 
+        {
             //instanciation repo 
             BookingFormEntity bfe = new BookingFormEntity();
             {
@@ -127,9 +130,26 @@ namespace swimming_pool_repositories
                 bfe.BookingDate = bfm.BookingDate;
                 bfe.BookingTime = bfm.BookingTime;
                 bfe.Message = bfm.Message;
-            }; 
-            return _bookingFormRepo.Insert(bfe); 
+            };
+            return _bookingFormRepo.Insert(bfe);
         }
         #endregion
+
+        #region User 
+
+        public bool CreateUser(UserModel um)
+        {
+            UserEntity ue = new UserEntity();
+            {
+                ue.FirstName = um.FirstName;
+                ue.LastName = um.LastName;
+                ue.Email = um.Email;
+                ue.Telephone = um.Telephone;
+                ue.Password = um.Password;
+                ue.UserName = um.UserName; 
+            };
+            return _userRepo.Insert(ue);
+            #endregion
+        }
     }
 }

@@ -1,0 +1,18 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Booking]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Table rebuild
+       [dbo].[Booking] (Table)
+     Create
+       [dbo].[FK_Booking_SwimSession] (Foreign Key)
+       [dbo].[FK_Booking_User] (Foreign Key)
+
+** Supporting actions

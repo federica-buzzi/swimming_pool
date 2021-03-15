@@ -58,6 +58,9 @@
     <Folder Include="Properties" />
     <Folder Include="dbo\" />
     <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="dbo\Fonctions Scalaires" />
+    <Folder Include="dbo\Stored Procedures" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Booking.sql" />
@@ -65,12 +68,15 @@
     <Build Include="dbo\Tables\Planning.sql" />
     <Build Include="dbo\Tables\Prices.sql" />
     <Build Include="dbo\Tables\News.sql" />
-  </ItemGroup>
-  <ItemGroup>
+    <Build Include="dbo\Tables\Admin.sql" />
     <Build Include="dbo\Tables\SwimSession.sql" />
-    <Build Include="dbo\Tables\User.sql" />
+    <Build Include="dbo\Views\V_Full_Reservation_User.sql" />
+    <Build Include="dbo\Views\V_GetRandom.sql" />
+    <Build Include="dbo\Fonctions Scalaires\SF_EncryptedPassword.sql" />
+    <Build Include="dbo\Fonctions Scalaires\SF_GenerateSalt.sql" />
+    <Build Include="dbo\Stored Procedures\SP_User_Insert.sql" />
   </ItemGroup>
   <ItemGroup>
-    <RefactorLog Include="swimming_pool-DB.refactorlog" />
+    <Build Include="dbo\Tables\User.sql" />
   </ItemGroup>
 </Project>

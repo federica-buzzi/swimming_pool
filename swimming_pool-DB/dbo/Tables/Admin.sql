@@ -1,6 +1,7 @@
 ﻿CREATE TABLE [dbo].[Admin]
 (
-	[Id] INT NOT NULL PRIMARY KEY, 
-    [AdminName] NVARCHAR(50) NOT NULL, 
-    [AdminPassword] NVARCHAR(50) NOT NULL
+	[IdAdmin] INT PRIMARY KEY IDENTITY NOT NULL, 
+    [AdminName] NCHAR(10) NOT NULL, 
+    [AdminPassword] VARBINARY(32) NOT NULL, 
+    [Salt] CHAR(8) NOT NULL
 )

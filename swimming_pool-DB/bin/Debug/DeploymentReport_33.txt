@@ -1,0 +1,40 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Admin]
+       [dbo].[BookingForm]
+       [dbo].[News]
+       [dbo].[Planning]
+       [dbo].[Prices]
+       [dbo].[SwimSession]
+       [dbo].[Booking]
+       [dbo].[User]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[Admin].[Id] is being dropped, data loss could occur.
+       The column [dbo].[BookingForm].[Id] is being dropped, data loss could occur.
+       The column [dbo].[News].[Id] is being dropped, data loss could occur.
+       The column [dbo].[Planning].[Id] is being dropped, data loss could occur.
+       The column [dbo].[Prices].[Id] is being dropped, data loss could occur.
+
+** User actions
+     Table rebuild
+       [dbo].[Admin] (Table)
+       [dbo].[BookingForm] (Table)
+       [dbo].[News] (Table)
+       [dbo].[Planning] (Table)
+       [dbo].[Prices] (Table)
+       [dbo].[SwimSession] (Table)
+       [dbo].[Booking] (Table)
+       [dbo].[User] (Table)
+
+** Supporting actions
+
+The column [dbo].[Admin].[Id] is being dropped, data loss could occur.
+The column [dbo].[BookingForm].[Id] is being dropped, data loss could occur.
+The column [dbo].[News].[Id] is being dropped, data loss could occur.
+The column [dbo].[Planning].[Id] is being dropped, data loss could occur.
+The column [dbo].[Prices].[Id] is being dropped, data loss could occur.
+

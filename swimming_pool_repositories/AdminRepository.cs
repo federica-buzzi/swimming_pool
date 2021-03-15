@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace swimming_pool_repositories
 {
-    public class AdminRepository: BaseRepository<AdminModel>, IConcreteRepository<AdminEntity>
+    public class AdminRepository: BaseRepository<AdminEntity>, IConcreteRepository<AdminEntity>
     {
         public AdminRepository(string Cnstr) : base(Cnstr)
         {

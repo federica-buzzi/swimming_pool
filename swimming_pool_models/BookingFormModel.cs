@@ -92,6 +92,7 @@ namespace swimming_pool_models
             }
         }
 
+        [Required]
         public int SpotsBooked
         {
             get
@@ -105,6 +106,7 @@ namespace swimming_pool_models
             }
         }
 
+        [Required]
         public DateTime BookingDate
         {
             get
@@ -118,6 +120,7 @@ namespace swimming_pool_models
             }
         }
 
+        [Required]
         public string BookingTime
         {
             get

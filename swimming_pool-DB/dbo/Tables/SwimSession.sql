@@ -1,7 +1,9 @@
-﻿CREATE TABLE [dbo].[SwimSession]
-(
-	[IdSwimSession] INT NOT NULL PRIMARY KEY IDENTITY, 
-    [Date] DATE NOT NULL, 
-    [TimeSlot] TIME NOT NULL, 
-    [MaxCapacity] SMALLINT NOT NULL DEFAULT 30
-)
+﻿CREATE TABLE [dbo].[SwimSession] (
+    [IdSwimSession]           INT PRIMARY KEY IDENTITY NOT NULL,
+    [SwimSessionDate]         NVARCHAR (50) NOT NULL,
+    [SwimSessionTimeSlot]     NVARCHAR (50) NOT NULL,
+    [SwimSessionNumberPeople] INT           NOT NULL,
+    [SwimSessionMaxCapacity]  INT DEFAULT 5 NULL,
+    
+);
+

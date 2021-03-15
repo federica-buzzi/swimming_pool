@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [dbo].[BookingForm] (
-    [Id]          INT            IDENTITY (1, 1) NOT NULL,
+    [IdBookingForm]          INT PRIMARY KEY  IDENTITY NOT NULL,
     [FirstName]   NVARCHAR (50)  NOT NULL,
     [LastName]    NVARCHAR(50)     NOT NULL,
     [SpotsBooked] INT            NOT NULL,
@@ -8,6 +8,5 @@
     [BookingDate]        DATE           NOT NULL,
     [Message]     NVARCHAR (MAX) NULL,
     [BookingTime] NVARCHAR(50) NOT NULL, 
-    PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 

@@ -1,10 +1,13 @@
-﻿CREATE TABLE [dbo].[Booking]
-(
-	[IdBooking] INT NOT NULL PRIMARY KEY IDENTITY, 
-    [IdSwimSession] INT NOT NULL,
-    FOREIGN KEY (IdSwimSession) REFERENCES [SwimSession](IdSwimSession),
-    [IdUser] INT NOT NULL, 
-    [Message] NVARCHAR(MAX) NULL, 
-    [SpotsBooked] INT NOT NULL, 
-    FOREIGN KEY (IdUser) REFERENCES [User](IdUser)
-)
+﻿CREATE TABLE [dbo].[Booking] (
+    [IdBooking] INT IDENTITY NOT NULL,
+    [Message]   NVARCHAR (MAX) NULL, 
+    [IdSwimSession] INT NOT NULL, 
+    [IdUser] INT NOT NULL,
+    CONSTRAINT PK_Booking PRIMARY KEY ([IdBooking]),
+    CONSTRAINT FK_Booking_SwimSession FOREIGN KEY ([IdSwimSession]) REFERENCES [SwimSession](IdSwimSession),
+    CONSTRAINT FK_Booking_User FOREIGN KEY ([IdUser]) REFERENCES [User](IdUser),
+);
+
+
+
+

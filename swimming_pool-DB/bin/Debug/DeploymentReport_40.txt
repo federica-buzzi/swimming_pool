@@ -1,0 +1,23 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[User]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Table rebuild
+       [dbo].[User] (Table)
+     Alter
+       [dbo].[SP_User_Insert] (Procedure)
+
+** Supporting actions
+     Drop
+       [dbo].[FK_Booking_User] (Foreign Key)
+     Create
+       [dbo].[FK_Booking_User] (Foreign Key)
+     Refresh
+       [dbo].[V_Full_Reservation_User] (View)

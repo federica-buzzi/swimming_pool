@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Planning]
 (
-	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+	[IdPlanning] INT PRIMARY KEY IDENTITY  NOT NULL, 
     [ScheduledDays] NVARCHAR(50) NOT NULL, 
     [ScheduledTimeStart] NVARCHAR(50) NOT NULL, 
     [ScheduledTimeEnd] NVARCHAR(50) NOT NULL, 
